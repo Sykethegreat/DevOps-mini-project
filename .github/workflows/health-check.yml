@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]          # Run when code is pushed to main
   schedule:
-    - cron: "0 0 * * 6"           # Run every hour
+    - cron: "0 0 * * 6"           # Run by 12am every saturday
   workflow_dispatch:              # Allow manual trigger
 
 jobs:
