@@ -1,0 +1,22 @@
+name: System Health Check
+
+on:
+  push:
+    branches: [ "main" ]          # Run when code is pushed to main
+  schedule:
+    - cron: "0 0 * * 6"           # Run every hour
+  workflow_dispatch:              # Allow manual trigger
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod +x ./1st-week/system-healthcheck.sh
+
+      - name: Run system health check script
+        run: sudo bash ./1st-week/system-healthcheck.sh
