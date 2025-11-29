@@ -20,3 +20,9 @@ jobs:
 
       - name: Run system health check script
         run: sudo bash ./1st-week/system-healthcheck.sh
+
+      - name: upload logs as artifact
+            uses: actions/upload-artifact@v4
+            with: 
+              name: system-health-logs
+              path: 1st-week/logs/
