@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Ensure logs directory exists
-mkdir -p "$(dirname "$0")/../logs"
+mkdir -p "$(dirname "$0")/logs"
 
 # Create timestamped log file
 timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
-log_file="$(dirname "$0")/../logs/wsl_healthcheck_${timestamp}.log"
+log_file="$(dirname "$0")/logs/system-healthcheck_${timestamp}.log"
 
 #Begin report
 {
