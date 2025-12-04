@@ -10,7 +10,7 @@ log_file="$(dirname "$0")/logs/system-healthcheck_${timestamp}.log"
 #Begin report
 {
 echo "========================================="
-echo "SYSYTEM HEALTH REPORT"
+echo "SYSTEM HEALTH REPORT"
 echo "DATE: $(date)"
 echo "========================================="
 
